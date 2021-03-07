@@ -39,6 +39,7 @@
     - [热键占用排查](#热键占用排查)
     - [google](#google)
       - [谷歌禁止自动更新](#谷歌禁止自动更新)
+    - [qq邮箱关联outlook](#qq邮箱关联outlook)
     - [oracle](#oracle)
       - [sqlplus命令行操作](#sqlplus命令行操作)
     - [dos](#dos)
@@ -60,6 +61,8 @@
     - [svn](#svn)
       - [SVN账号密码修改地址](#svn账号密码修改地址)
       - [svn忽略文件](#svn忽略文件)
+    - [tomcat](#tomcat)
+      - [tomcat启动](#tomcat启动)
     - [office](#office)
       - [excel快速定位](#excel快速定位)
       - [excel自定义快捷键](#excel自定义快捷键)
@@ -245,6 +248,15 @@ openark.exe
       值 0 -->
 ```
 
+### qq邮箱关联outlook
+```
+username
+password
+pop-mail.outlook.com
+995
+开启ssl
+```
+
 ### oracle
 #### sqlplus命令行操作
 ```
@@ -367,7 +379,13 @@ maven-archiver
 maven-status
 test-classes
 ```
-
+### tomcat
+#### tomcat启动
+```
+环境变量直接设置,或者启动时set
+SET JAVA_HOME=(JDK目录)
+SET CATALINA_HOME=(解压后Tomcat的目录)
+```
 
 ### office
 #### excel快速定位
