@@ -411,6 +411,7 @@ alt按一次 + 4、5、6...执行
 ### github
 #### github请求地址
 ```
+//只有pull可以，push只能https
 https://github.com/...改为
 git://github.com/...
 ```
