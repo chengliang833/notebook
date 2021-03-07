@@ -414,4 +414,13 @@ alt按一次 + 4、5、6...执行
 //只有pull可以，push只能https
 https://github.com/...改为
 git://github.com/...
+
+//push问题
+pac
+github.com
+github.global.ssl.fastly.net
+//sourcetree代理
+127.0.0.1
+1080
+向git配置文件添加代理信息
 ```
