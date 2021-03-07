@@ -67,6 +67,8 @@
       - [excel快速定位](#excel快速定位)
       - [excel自定义快捷键](#excel自定义快捷键)
       - [excel按列跨越合并](#excel按列跨越合并)
+    - [github](#github)
+      - [github请求地址](#github请求地址)
 
 # notebook
 ## windows
@@ -406,5 +408,9 @@ alt按一次 + 4、5、6...执行
 粘贴时如果无转置选项，需要复制的源选项框包含一个已合并单元格（源选项框太简单，不会有太多粘贴选项）
 若有边框注意合并后会缺失
 ```
-
-
+### github
+#### github请求地址
+```
+https://github.com/...改为
+git://github.com/...
+```
