@@ -12,7 +12,7 @@
     - [B7在E2到E240的出现次数](#b7在e2到e240的出现次数)
     - [bc Beyond Compare过期提示](#bc-beyond-compare过期提示)
     - [windows端口映射](#windows端口映射)
-    - [建立软链接(/d建目录)](#建立软链接d建目录)
+    - [建立软链接](#建立软链接)
     - [win+R设置windows自动登录](#winr设置windows自动登录)
     - [双指触控修改 regedit](#双指触控修改-regedit)
     - [win+R 更改桌面图标](#winr-更改桌面图标)
@@ -67,6 +67,7 @@
       - [excel快速定位](#excel快速定位)
       - [excel自定义快捷键](#excel自定义快捷键)
       - [excel按列跨越合并](#excel按列跨越合并)
+      - [excel保存耗时太久排查](#excel保存耗时太久排查)
     - [github](#github)
       - [github请求地址](#github请求地址)
 
@@ -120,14 +121,21 @@ C:\Users\eshonulane\AppData\Roaming\Scooter Software\Beyond Compare 4
 删除BCSessions.xml外其他文件, BCSessions.xml 删除Flags属性
 
 ### windows端口映射
-netsh interface portproxy add v4tov4 listenport=58953 listenaddress=127.0.0.1 connectaddress=192.168.99.100 connectport=22<br/>
-netsh interface portproxy add v4tov4 listenport=27891 listenaddress=192.168.1.80 connectaddress=192.168.137.10 connectport=22<br/>
-netsh interface portproxy delete v4tov4 listenport=8180 listenaddress=192.168.8.185<br/>
+```
+netsh interface portproxy add v4tov4 listenport=58953 listenaddress=127.0.0.1 connectaddress=192.168.99.100 connectport=22
+netsh interface portproxy add v4tov4 listenport=27891 listenaddress=192.168.1.80 connectaddress=192.168.137.10 connectport=22
+netsh interface portproxy add v4tov4 listenport=2181 listenaddress=127.0.0.1 connectaddress=192.168.204.128 connectport=2181
+netsh interface portproxy delete v4tov4 listenport=8180 listenaddress=192.168.8.185
 netsh interface portproxy show all
+```
 
-### 建立软链接(/d建目录)
-mklink D:\Winternet\ShadowsocksR-4.7.0\pac.txt D:\Winternet\Shadowsocks2.5\pac.txt<br/>
+### 建立软链接
+```
+/d 建目录
+mklink 目标目录 源目录
+mklink D:\Winternet\ShadowsocksR-4.7.0\pac.txt D:\Winternet\Shadowsocks2.5\pac.txt
 mklink C:\Users\eshonulane\.m2\settings.xml D:\Develop\Install\Java\apache-maven-3.5.3\conf\settings.xml
+```
 
 ### win+R设置windows自动登录
 control userpasswords2
@@ -221,7 +229,7 @@ C:\ProgramData\Oracle\Java\javapath;
 目录下新增desktop.ini，对应文件夹更改图标后复原，ansi编码
 ```
 [.ShellClassInfo]
-LocalizedResourceName=
+LocalizedResourceName=***
 ```
 
 ### ditto快速粘贴搜索
@@ -360,10 +368,12 @@ C:\Users\eshonulane\AppData\Roaming\Subversion
 ```
 properties -> New -> svn:global-ignores
 //已更改的文件无法忽略
+//若eclipse中仍然未忽略，重新导入项目
 
 .classpath
 .project
 *.iml
+*.eml
 *.log
 *.log.*
 .idea
@@ -373,13 +383,15 @@ logs
 log
 target
 dubbocache
-//单独配置，如target已提交空目录，目录下新增文件时，会显示
+
 classes
 dfwy-autobulidapi.jar
 generated-sources
 maven-archiver
 maven-status
 test-classes
+*.json.gz
+//单独配置，如target已提交空目录，目录下新增文件时，会显示
 ```
 ### tomcat
 #### tomcat启动
@@ -408,6 +420,12 @@ alt按一次 + 4、5、6...执行
 粘贴时如果无转置选项，需要复制的源选项框包含一个已合并单元格（源选项框太简单，不会有太多粘贴选项）
 若有边框注意合并后会缺失
 ```
+
+#### excel保存耗时太久排查
+```
+某个sheet使用了全部行（根据右边导航条排查），删除下方所有空行
+```
+
 ### github
 #### github请求地址
 ```
