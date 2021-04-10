@@ -68,6 +68,7 @@
       - [excel自定义快捷键](#excel自定义快捷键)
       - [excel按列跨越合并](#excel按列跨越合并)
       - [excel保存耗时太久排查](#excel保存耗时太久排查)
+      - [excel公式超链接](#excel公式超链接)
     - [github](#github)
       - [github请求地址](#github请求地址)
 
@@ -424,6 +425,13 @@ alt按一次 + 4、5、6...执行
 #### excel保存耗时太久排查
 ```
 某个sheet使用了全部行（根据右边导航条排查），删除下方所有空行
+```
+
+#### excel公式超链接
+```
+=HYPERLINK("filename.xlsx#sheetname!A1","showname")
+//链接当前文件
+=HYPERLINK("#sheetname!A1","showname")
 ```
 
 ### github
