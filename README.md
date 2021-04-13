@@ -438,7 +438,7 @@ alt按一次 + 4、5、6...执行
 
 #### excel统计值是否存在
 ```
-=COUNTIF($C1:$C19,I20)
+=COUNTIF($C$1:$C$19,I23)
 ```
 
 ### github
