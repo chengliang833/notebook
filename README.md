@@ -7,7 +7,6 @@
     - [IP查计算机名](#ip查计算机名)
     - [谷歌插件位置(注意刷新)](#谷歌插件位置注意刷新)
     - [谷歌接口调试model重置](#谷歌接口调试model重置)
-    - [excel计算公式](#excel计算公式)
     - [ping各个网络](#ping各个网络)
     - [B7在E2到E240的出现次数](#b7在e2到e240的出现次数)
     - [bc Beyond Compare过期提示](#bc-beyond-compare过期提示)
@@ -64,11 +63,13 @@
     - [tomcat](#tomcat)
       - [tomcat启动](#tomcat启动)
     - [office](#office)
+      - [excel计算公式](#excel计算公式)
       - [excel快速定位](#excel快速定位)
       - [excel自定义快捷键](#excel自定义快捷键)
       - [excel按列跨越合并](#excel按列跨越合并)
       - [excel保存耗时太久排查](#excel保存耗时太久排查)
       - [excel公式超链接](#excel公式超链接)
+      - [excel统计值是否存在](#excel统计值是否存在)
     - [github](#github)
       - [github请求地址](#github请求地址)
 
@@ -102,9 +103,6 @@ C:\Users\eshonulane\AppData\Local\Google\Chrome\User Data\Default\Extensions
 ```
 moduleDiv = "<div class='panel panel-info no-radius b0 mt0 left-menu-border-top'>";	moduleDiv += "      <div class='panel-heading no-radius rel' data-parent='#modules'>";	moduleDiv += "          <div class='cursor collapsed' data-toggle='collapse' data-parent='#modules' href='#panel_ca_moduleId' crap-data='ca_moduleId' aria-expanded='false'>";	moduleDiv += "              <i class='iconfont module-title-ico f16'>&#xe624;</i>&nbsp;&nbsp;  ca_moduleName";	moduleDiv += "		        <span class='more'>";	moduleDiv += "			        <i class='iconfont fr h lh40'>&#xe75f;</i>";	moduleDiv += "			        <span class='t0 h'><i class='iconfont interface-menu rename-module mt0 lh40 fr'crap-data='ca_moduleId'>&#xe69e;</i></span>";	moduleDiv += "	                <span class='t0 h'><i class='iconfont interface-menu delete-module mt0 lh40 fr' crap-data='ca_moduleId'>&#xe69d;</i></span>";	moduleDiv += "			        <span class='t0 h'><i class='iconfont interface-menu down-module  mt0 lh40 fr' crap-data='ca_moduleId'>&#xe65e;</i></span>";	moduleDiv += "			        <span class='t0 h'><i class='iconfont interface-menu up-module  mt0 lh40 fr' crap-data='ca_moduleId'>&#xe8e9;</i></span>";	moduleDiv += "		        </span>";	moduleDiv += "          </div>";	moduleDiv += "      </div>";	moduleDiv += "      <div id='panel_ca_moduleId' class='panel-collapse BGEEE collapse' aria-expanded='false' style='height: 0px;'>";	moduleDiv += "          <div class='panel-body b0 p0'>";	moduleDiv += "              ca_interfaces";	moduleDiv += "           </div>";	moduleDiv += "       </div>";	moduleDiv += "   </div>";
 ```
-
-### excel计算公式
-需常规单元格
 
 ### ping各个网络
 for /L %i IN (192,1,254) DO ping -w 2 -n 1 192.168.0.%i<br/>
@@ -403,6 +401,10 @@ SET CATALINA_HOME=(解压后Tomcat的目录)
 ```
 
 ### office
+
+#### excel计算公式
+需常规单元格
+
 #### excel快速定位
 ```
 左上角名称框
@@ -432,6 +434,11 @@ alt按一次 + 4、5、6...执行
 =HYPERLINK("filename.xlsx#sheetname!A1","showname")
 //链接当前文件
 =HYPERLINK("#sheetname!A1","showname")
+```
+
+#### excel统计值是否存在
+```
+=COUNTIF($C1:$C19,I20)
 ```
 
 ### github
