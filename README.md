@@ -98,6 +98,7 @@ nbtstat -a 192.168.0.100
 
 ### 谷歌插件位置(注意刷新)
 C:\Users\eshonulane\AppData\Local\Google\Chrome\User Data\Default\Extensions
+C:\Users\eshonulane\AppData\Local\Google\Chrome\User Data\Profile 1\Extensions
 
 ### 谷歌接口调试model重置
 ```
