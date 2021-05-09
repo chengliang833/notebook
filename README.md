@@ -251,6 +251,7 @@ openark.exe
 #### 谷歌禁止自动更新
 ```
 ***直接安装不自动更新版***
+http://www.google.com/dl/release2/chrome/ANgMaZuTFP5u7kDbYxrbLJ4_86.0.4240.183/86.0.4240.183_chrome_installer.exe
 
 <!-- regedit
 计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Policies
