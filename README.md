@@ -72,6 +72,8 @@
       - [excel统计值是否存在](#excel统计值是否存在)
     - [github](#github)
       - [github请求地址](#github请求地址)
+    - [dbeaver](#dbeaver)
+      - [批量设置sql-task](#批量设置sql-task)
 
 # notebook
 ## windows
@@ -457,4 +459,15 @@ github.global.ssl.fastly.net
 127.0.0.1
 1080
 向git配置文件添加代理信息
+```
+
+### dbeaver
+#### 批量设置sql-task
+```
+修改路径
+C:\Users\eshonulane\AppData\Roaming\DBeaverData\workspace6\General\.dbeaver\task.json
+正则替换
+(.*)\r\n
+{"type": "databaseTransferProducer","location": {"type": "query","project": "General","dataSource": "oracle_thin-17839c4fbf2-77da349831c948bf","query": "select * from $1 where req_id = 'ff808081750b3f1d01750b514e2a000c'"}},\r\n
+{"type": "streamTransferConsumer"},
 ```
