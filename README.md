@@ -46,6 +46,7 @@
       - [cmd字体](#cmd字体)
       - [内网路由表 dos](#内网路由表-dos)
       - [重置网络](#重置网络)
+      - [修改cmd窗口大小(按行数、列数)](#修改cmd窗口大小按行数列数)
     - [eclipse](#eclipse)
       - [eclipse界面布局地址](#eclipse界面布局地址)
       - [eclipse安装lombook](#eclipse安装lombook)
@@ -55,8 +56,13 @@
       - [eclipse常用快捷键](#eclipse常用快捷键)
       - [eclipse导入关联项目](#eclipse导入关联项目)
     - [idea](#idea)
+      - [idea打开始终选择项目](#idea打开始终选择项目)
+      - [idea大小写不敏感](#idea大小写不敏感)
       - [idea主动配置源（.xml/.classpath）](#idea主动配置源xmlclasspath)
       - [idea取消引号反引号自动配对](#idea取消引号反引号自动配对)
+      - [idea去除虚拟空格和行尾空格](#idea去除虚拟空格和行尾空格)
+      - [try快捷键](#try快捷键)
+      - [配置aspectj编译](#配置aspectj编译)
     - [svn](#svn)
       - [SVN账号密码修改地址](#svn账号密码修改地址)
       - [svn忽略文件](#svn忽略文件)
@@ -317,6 +323,10 @@ chcp 936  //默认
 2. NETSH WINHTTP RESET PROXY 
 3. IPCONFIG /FLUSHDNS 
 
+#### 修改cmd窗口大小(按行数、列数)
+mode con cols=237 lines=62
+
+
 ### eclipse
 #### eclipse界面布局地址
 D:\Develop\Install\eclipse_pristine\workspace\.metadata\.plugins\org.eclipse.e4.workbench<br/>
@@ -355,13 +365,41 @@ ctrl + shift + g 查看方法在哪里被引用
 
 
 ### idea
+#### idea打开始终选择项目
+appearance & behavior || system settings || startup/shutdown || reopen last project on startup
+
+#### idea大小写不敏感
+editor || general || code completion || match case
+
 #### idea主动配置源（.xml/.classpath）
-mvn idea:module<br/>
-或<br/>
+```
+mvn idea:module
+或
 open 直接打开项目根目录
+```
 
 #### idea取消引号反引号自动配对
 editor || general || smartkeys || insert pair quote
+
+#### idea去除虚拟空格和行尾空格
+```
+editor || general || virtual space 全部取消
+editor || general || other || strip trailing spaces on save || none
+```
+
+#### try快捷键
+ctrl + alt + t
+
+#### 配置aspectj编译
+```
+1.pom引入aspectjrt
+2.修改编译 javap -> ajc，指定aspectjtools
+（maven项目修改reimport后会重新变为javap）
+File | Settings | Build, Execution, Deployment | Compiler | Java Compiler 
+|| Use compiler || Ajc
+|| Ajc Options || Path to aspectjtools.jar || ...
+3.新增*.aj指定切面
+```
 
 ### svn
 #### SVN账号密码修改地址
