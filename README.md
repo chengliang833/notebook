@@ -63,6 +63,7 @@
       - [idea去除虚拟空格和行尾空格](#idea去除虚拟空格和行尾空格)
       - [try快捷键](#try快捷键)
       - [配置aspectj编译](#配置aspectj编译)
+      - [查看所有关联类](#查看所有关联类)
     - [svn](#svn)
       - [SVN账号密码修改地址](#svn账号密码修改地址)
       - [svn忽略文件](#svn忽略文件)
@@ -399,6 +400,14 @@ File | Settings | Build, Execution, Deployment | Compiler | Java Compiler
 || Use compiler || Ajc
 || Ajc Options || Path to aspectjtools.jar || ...
 3.新增*.aj指定切面
+```
+
+#### 查看所有关联类
+```
+ctrl+alt+shift u 打开基本继承引用
+选中当前类
+ctrl+alt B 
+全选回车 -> 所有的继承实现
 ```
 
 ### svn
