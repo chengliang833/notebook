@@ -11,6 +11,7 @@
     - [B7在E2到E240的出现次数](#b7在e2到e240的出现次数)
     - [bc Beyond Compare过期提示](#bc-beyond-compare过期提示)
     - [windows端口映射](#windows端口映射)
+    - [查看端口占用](#查看端口占用)
     - [建立软链接](#建立软链接)
     - [win+R设置windows自动登录](#winr设置windows自动登录)
     - [双指触控修改 regedit](#双指触控修改-regedit)
@@ -64,6 +65,7 @@
       - [try快捷键](#try快捷键)
       - [配置aspectj编译](#配置aspectj编译)
       - [查看所有关联类](#查看所有关联类)
+      - [tomcat打印语言](#tomcat打印语言)
     - [svn](#svn)
       - [SVN账号密码修改地址](#svn账号密码修改地址)
       - [svn忽略文件](#svn忽略文件)
@@ -137,6 +139,9 @@ netsh interface portproxy add v4tov4 listenport=2181 listenaddress=127.0.0.1 con
 netsh interface portproxy delete v4tov4 listenport=8180 listenaddress=192.168.8.185
 netsh interface portproxy show all
 ```
+
+### 查看端口占用
+netstat -ano | findstr "端口号"
 
 ### 建立软链接
 ```
@@ -408,6 +413,13 @@ ctrl+alt+shift u 打开基本继承引用
 选中当前类
 ctrl+alt B 
 全选回车 -> 所有的继承实现
+```
+
+#### tomcat打印语言
+```
+不添加值，默认英文
+-Duser.language=en
+logback.xml编码改为GBK
 ```
 
 ### svn
