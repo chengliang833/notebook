@@ -136,7 +136,7 @@ C:\Users\eshonulane\AppData\Roaming\Scooter Software\Beyond Compare 4
 netsh interface portproxy add v4tov4 listenport=58953 listenaddress=127.0.0.1 connectaddress=192.168.99.100 connectport=22
 netsh interface portproxy add v4tov4 listenport=27891 listenaddress=192.168.1.80 connectaddress=192.168.137.10 connectport=22
 netsh interface portproxy add v4tov4 listenport=2181 listenaddress=127.0.0.1 connectaddress=192.168.204.128 connectport=2181
-netsh interface portproxy delete v4tov4 listenport=8180 listenaddress=192.168.8.185
+netsh interface portproxy delete v4tov4 listenport=2181 listenaddress=127.0.0.1
 netsh interface portproxy show all
 ```
 
@@ -530,4 +530,30 @@ C:\Users\eshonulane\AppData\Roaming\DBeaverData\workspace6\General\.dbeaver\task
 (.*)\r\n
 {"type": "databaseTransferProducer","location": {"type": "query","project": "General","dataSource": "oracle_thin-17839c4fbf2-77da349831c948bf","query": "select * from $1 where req_id = 'ff808081750b3f1d01750b514e2a000c'"}},\r\n
 {"type": "streamTransferConsumer"},
+```
+
+### postman
+#### 设置前置脚本
+```
+var timestamp = (new Date()).getTime()
+var queryArr = pm.request.url.query || []
+var tmp = ["timestamp" + timestamp]
+queryArr.each(function (item) {
+    // 过滤掉sign和timestamp参数
+    if (item.key != "sign" && item.key != "timestamp") {
+        tmp.push(item.key + item.value)
+    }
+})
+// 将数据排序并合并成字符串
+var str = tmp.sort().join("")
+// 进行MD5加密
+var sign = CryptoJS.MD5(str).toString()
+
+// 设置时间戳
+pm.environment.set("timestamp", timestamp);
+// 设置签名
+pm.environment.set("sign", sign)
+
+//调用
+//{{timestamp}}
 ```
