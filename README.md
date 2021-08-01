@@ -25,7 +25,7 @@
     - [台电禁用HOME(Win键)：](#台电禁用homewin键)
     - [添加资源管理器到收藏夹](#添加资源管理器到收藏夹)
     - [睡眠启停(以管理员身份运行)](#睡眠启停以管理员身份运行)
-    - [远程桌面记录 regidit](#远程桌面记录-regidit)
+    - [远程桌面记录 regedit](#远程桌面记录-regedit)
     - [win store充值](#win-store充值)
     - [刷新dns](#刷新dns)
     - [host文件](#host文件)
@@ -66,6 +66,8 @@
       - [配置aspectj编译](#配置aspectj编译)
       - [查看所有关联类](#查看所有关联类)
       - [tomcat打印语言](#tomcat打印语言)
+    - [vscode](#vscode)
+      - [滚动一页](#滚动一页)
     - [svn](#svn)
       - [SVN账号密码修改地址](#svn账号密码修改地址)
       - [svn忽略文件](#svn忽略文件)
@@ -83,6 +85,8 @@
       - [github请求地址](#github请求地址)
     - [dbeaver](#dbeaver)
       - [批量设置sql-task](#批量设置sql-task)
+    - [postman](#postman)
+      - [设置前置脚本](#设置前置脚本)
 
 # notebook
 ## windows
@@ -200,7 +204,7 @@ user||eshonulane||链接||右键新建快捷方式<br/>
 关闭休眠功能：@powercfg -h off<br/>
 重启休眠功能：@powercfg -h on
 
-### 远程桌面记录 regidit
+### 远程桌面记录 regedit
 HKEY_CURRENT_USER\Software\Microsoft\Terminal ServerClient\Default
 
 ### win store充值
@@ -420,6 +424,12 @@ ctrl+alt B
 不添加值，默认英文
 -Duser.language=en
 logback.xml编码改为GBK
+```
+
+### vscode
+#### 滚动一页
+```
+alt+滚轮
 ```
 
 ### svn
