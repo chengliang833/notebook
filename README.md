@@ -16,6 +16,7 @@
     - [win+R设置windows自动登录](#winr设置windows自动登录)
     - [双指触控修改 regedit](#双指触控修改-regedit)
     - [win+R 更改桌面图标](#winr-更改桌面图标)
+    - [win+R 更改右键出现位置](#winr-更改右键出现位置)
     - [word自定义快捷键](#word自定义快捷键)
     - [开机自启配置 - win+R regidit](#开机自启配置---winr-regidit)
     - [WiFi管理](#wifi管理)
@@ -140,6 +141,7 @@ C:\Users\eshonulane\AppData\Roaming\Scooter Software\Beyond Compare 4
 netsh interface portproxy add v4tov4 listenport=58953 listenaddress=127.0.0.1 connectaddress=192.168.99.100 connectport=22
 netsh interface portproxy add v4tov4 listenport=27891 listenaddress=192.168.1.80 connectaddress=192.168.137.10 connectport=22
 netsh interface portproxy add v4tov4 listenport=2181 listenaddress=127.0.0.1 connectaddress=192.168.204.128 connectport=2181
+netsh interface portproxy add v4tov4 listenport=53389 listenaddress=192.168.137.1 connectaddress=192.168.214.50 connectport=3389
 netsh interface portproxy delete v4tov4 listenport=2181 listenaddress=127.0.0.1
 netsh interface portproxy show all
 ```
@@ -156,13 +158,28 @@ mklink C:\Users\eshonulane\.m2\settings.xml D:\Develop\Install\Java\apache-maven
 ```
 
 ### win+R设置windows自动登录
+```
 control userpasswords2
+//或者
+regedit
+计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+新建字符串值
+DefaultUserName
+DefaultPassword
+```
 
 ### 双指触控修改 regedit
 2FingerTapAction
 
 ### win+R 更改桌面图标
+```
 rundll32.exe shell32.dll,Control_RunDLL desk.cpl,,0
+```
+
+### win+R 更改右键出现位置
+```
+shell:::{80F3F1D5-FECA-45F3-BC32-752C152E456E}
+```
 
 ### word自定义快捷键
 ctrl + alt + num+ 开始自定义快捷键(单击位置设置)
@@ -205,7 +222,7 @@ user||eshonulane||链接||右键新建快捷方式<br/>
 重启休眠功能：@powercfg -h on
 
 ### 远程桌面记录 regedit
-HKEY_CURRENT_USER\Software\Microsoft\Terminal ServerClient\Default
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Terminal Server Client\Default
 
 ### win store充值
 win+R wsreset
