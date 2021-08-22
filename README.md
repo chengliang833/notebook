@@ -104,6 +104,14 @@ npm install --registry=http://registry.npm.taobao.org<br/>
 npm install node-sass --registry=http://registry.npm.taobao.org<br/>
 npm config set registry https://registry.npm.taobao.org<br/>
 
+### node执行js命令全局模块配置
+```
+//设置环境变量
+NODE_PATH=C:\Users\eshonulane\AppData\Roaming\npm\node_modules
+//mouseInc不支持读取系统变量，每次cmd直接执行
+set NODE_PATH=C:\Users\Administrator\AppData\Roaming\npm\node_modules
+```
+
 ### IP查计算机名
 nbtstat -a 192.168.0.100
 
@@ -201,7 +209,7 @@ user||eshonulane||链接||右键新建快捷方式<br/>
 重启休眠功能：@powercfg -h on
 
 ### 远程桌面记录 regidit
-HKEY_CURRENT_USER\Software\Microsoft\Terminal ServerClient\Default
+HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default
 
 ### win store充值
 win+R wsreset
