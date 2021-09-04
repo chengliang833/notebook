@@ -147,10 +147,12 @@ C:\Users\eshonulane\AppData\Roaming\Scooter Software\Beyond Compare 4
 
 ### windows端口映射
 ```
+//有电脑管家时重启电脑映射会失效，需要删掉重新添加
 netsh interface portproxy add v4tov4 listenport=58953 listenaddress=127.0.0.1 connectaddress=192.168.99.100 connectport=22
 netsh interface portproxy add v4tov4 listenport=27891 listenaddress=192.168.1.80 connectaddress=192.168.137.10 connectport=22
 netsh interface portproxy add v4tov4 listenport=2181 listenaddress=127.0.0.1 connectaddress=192.168.204.128 connectport=2181
-netsh interface portproxy add v4tov4 listenport=53389 listenaddress=192.168.137.1 connectaddress=192.168.214.50 connectport=3389
+netsh interface portproxy delete v4tov4 listenport=1080 listenaddress=192.168.137.1
+netsh interface portproxy add v4tov4 listenport=1080 listenaddress=192.168.137.1 connectaddress=127.0.0.1 connectport=1080
 netsh interface portproxy delete v4tov4 listenport=2181 listenaddress=127.0.0.1
 netsh interface portproxy show all
 ```
