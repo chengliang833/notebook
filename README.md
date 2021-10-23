@@ -326,6 +326,7 @@ cd D:\Develop\Install\plsql\client\instantclient_19_9
 cmd
 ./sqlplus /nolog
 conn zhangsan/password@10.0.1.242:1521/orcl;
+或sqlplus zhangsan/password@10.0.1.242:1521/orcl;
 执行文件
 SQL>@D:\Develop\Install\plsql\client\sqltest\test.sql
 update注意commit;
@@ -352,9 +353,12 @@ chcp 65001<br/>
 chcp 936  //默认
 
 #### 内网路由表 dos
-添加 route add 10.22.0.0 mask 255.255.0.0 192.168.1.1<br/>
-永久 route add -p 10.22.0.0 mask 255.255.0.0 172.20.20.0 metric 3 if 4(优先级3 4号网卡)<br/>
+```
+查看 route print
+添加 route add 10.22.0.0 mask 255.255.0.0 192.168.1.1
+永久 route add -p 10.22.0.0 mask 255.255.0.0 172.20.20.0 metric 3 if 4(优先级3 4号网卡)
 删除 route delete 10.22.0.0
+```
 
 #### 重置网络
 1. NETSH INT IP RESET 
