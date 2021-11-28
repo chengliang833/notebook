@@ -470,7 +470,7 @@ C:\Users\eshonulane\AppData\Roaming\Subversion
 
 #### svn忽略文件
 ```
-properties -> New -> svn:global-ignores
+properties -> New -> Other -> svn:global-ignores
 //已更改的文件无法忽略
 //若eclipse中仍然未忽略，重新导入项目
 
