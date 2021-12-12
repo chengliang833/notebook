@@ -85,6 +85,7 @@
       - [excel统计值是否存在](#excel统计值是否存在)
     - [github](#github)
       - [github请求地址](#github请求地址)
+      - [git bash编码配置](#git-bash编码配置)
     - [dbeaver](#dbeaver)
       - [批量设置sql-task](#批量设置sql-task)
     - [postman](#postman)
@@ -563,6 +564,15 @@ github.global.ssl.fastly.net
 1080
 向git配置文件添加代理信息
 ```
+#### git bash编码配置
+```
+//两个都要对应且和文件内容编码一致，才能显示正常
+Options||Text||characterset
+UTF-8/GBK
+Options||Window||UI language
+default/zh_cn
+```
+
 
 ### dbeaver
 #### 批量设置sql-task
