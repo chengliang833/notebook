@@ -50,6 +50,7 @@
       - [内网路由表 dos](#内网路由表-dos)
       - [重置网络](#重置网络)
       - [修改cmd窗口大小(按行数、列数)](#修改cmd窗口大小按行数列数)
+      - [临时安装（如msi）](#临时安装如msi)
     - [eclipse](#eclipse)
       - [eclipse界面布局地址](#eclipse界面布局地址)
       - [eclipse安装lombook](#eclipse安装lombook)
@@ -156,7 +157,6 @@ netsh interface portproxy delete v4tov4 listenport=10810 listenaddress=192.168.1
 netsh interface portproxy delete v4tov4 listenport=10809 listenaddress=192.168.137.1
 netsh interface portproxy delete v4tov4 listenport=10808 listenaddress=192.168.137.1
 netsh interface portproxy show all
-
 ```
 
 ### 查看端口占用
@@ -370,6 +370,12 @@ chcp 936  //默认
 #### 修改cmd窗口大小(按行数、列数)
 mode con cols=237 lines=62
 
+#### 临时安装（如msi）
+```
+1.确保Windows Installer和Windows Modules Installer正在运行
+2.cmd 管理员
+3.msiexec /package "安装文件的全路径"
+```
 
 ### eclipse
 #### eclipse界面布局地址
