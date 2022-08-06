@@ -39,6 +39,7 @@
     - [ditto快速粘贴搜索](#ditto快速粘贴搜索)
     - [bat添加到开始屏幕](#bat添加到开始屏幕)
     - [热键占用排查](#热键占用排查)
+    - [清理垃圾步骤](#清理垃圾步骤)
     - [google](#google)
       - [谷歌禁止自动更新](#谷歌禁止自动更新)
     - [qq邮箱关联outlook](#qq邮箱关联outlook)
@@ -91,6 +92,8 @@
       - [批量设置sql-task](#批量设置sql-task)
     - [postman](#postman)
       - [设置前置脚本](#设置前置脚本)
+    - [apple](#apple)
+      - [备份位置](#备份位置)
 
 # notebook
 ## windows
@@ -292,6 +295,12 @@ LocalizedResourceName=***
 ```
 openark.exe
 ```
+
+### 清理垃圾步骤
+1.软媒魔方垃圾清理
+2.windows磁盘清理
+3.DriverStore Explorer(效果不大)
+4.Windows Installer文件清理工具(效果不大)
 
 ### google
 #### 谷歌禁止自动更新
@@ -615,4 +624,10 @@ pm.environment.set("sign", sign)
 
 //调用
 //{{timestamp}}
+```
+
+### apple
+#### 备份位置
+```
+C:\Users\eshonulane\AppData\Roaming\Apple Computer\MobileSync\Backup
 ```
