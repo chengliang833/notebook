@@ -71,6 +71,7 @@
       - [tomcat打印语言](#tomcat打印语言)
     - [vscode](#vscode)
       - [滚动一页](#滚动一页)
+      - [全选相似字段](#全选相似字段)
     - [svn](#svn)
       - [SVN账号密码修改地址](#svn账号密码修改地址)
       - [svn忽略文件](#svn忽略文件)
@@ -472,6 +473,11 @@ logback.xml编码改为GBK
 alt+滚轮
 ```
 
+#### 全选相似字段
+```
+ctrl+shift+L
+```
+
 ### svn
 #### SVN账号密码修改地址
 C:\Users\eshonulane\AppData\Roaming\Subversion
@@ -616,3 +622,35 @@ pm.environment.set("sign", sign)
 //调用
 //{{timestamp}}
 ```
+
+### office
+#### 正则宏替换
+```
+Private Sub RegExp_Replace()
+
+    Dim RegExp As Object
+    Dim SearchRange As Range, Cell As Range
+    
+    '此处定义正则表达式
+    Set RegExp = CreateObject("vbscript.regexp")
+    RegExp.Pattern = "(\d{4})-(\d{2})-(\d{2})"
+     
+    '此处指定查找范围
+    Set SearchRange = ActiveSheet.Range("A1:CC2000")
+    
+    '遍历查找范围内的单元格
+    For Each Cell In SearchRange
+        Set Matches = RegExp.Execute(Cell.Value)
+        If Matches.Count >= 1 Then
+            Set Match = Matches(0)
+            Cell.Value = RegExp.Replace(Cell.Value, "$1/$2/$3")
+        End If
+    Next
+
+End Sub
+```
+
+
+
+
+
