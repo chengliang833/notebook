@@ -19,7 +19,7 @@
     - [win+R 更改桌面图标](#winr-更改桌面图标)
     - [win+R 更改右键出现位置](#winr-更改右键出现位置)
     - [word自定义快捷键](#word自定义快捷键)
-    - [开机自启配置 - win+R regidit](#开机自启配置---winr-regidit)
+    - [开机自启配置](#开机自启配置)
     - [WiFi管理](#wifi管理)
     - [windows清除默认打开方式](#windows清除默认打开方式)
     - [任务栏文件资源管理器起始位置](#任务栏文件资源管理器起始位置)
@@ -203,8 +203,13 @@ shell:::{80F3F1D5-FECA-45F3-BC32-752C152E456E}
 ### word自定义快捷键
 ctrl + alt + num+ 开始自定义快捷键(单击位置设置)
 
-### 开机自启配置 - win+R regidit
-计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+### 开机自启配置
+```
+1. win+R regidit
+    计算机\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+2. win10 - 任务计划程序
+    创建任务 - 可选最高权限(管理员运行) - 触发器当任何用户登录时 - 操作关联启动文件(exe,bat)
+```
 
 ### WiFi管理
 1. Win+X||命令提示符(管理员)
