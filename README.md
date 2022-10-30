@@ -6,8 +6,6 @@
     - [npm阿里镜像](#npm阿里镜像)
     - [node执行js命令全局模块配置](#node执行js命令全局模块配置)
     - [IP查计算机名](#ip查计算机名)
-    - [谷歌插件位置(注意刷新)](#谷歌插件位置注意刷新)
-    - [谷歌接口调试model重置](#谷歌接口调试model重置)
     - [ping各个网络](#ping各个网络)
     - [B7在E2到E240的出现次数](#b7在e2到e240的出现次数)
     - [bc Beyond Compare过期提示](#bc-beyond-compare过期提示)
@@ -40,8 +38,11 @@
     - [bat添加到开始屏幕](#bat添加到开始屏幕)
     - [热键占用排查](#热键占用排查)
     - [清理垃圾步骤](#清理垃圾步骤)
+    - [文件管理器ftp快捷连接](#文件管理器ftp快捷连接)
     - [google](#google)
       - [谷歌禁止自动更新](#谷歌禁止自动更新)
+      - [谷歌插件位置(注意刷新)](#谷歌插件位置注意刷新)
+      - [谷歌接口调试model重置](#谷歌接口调试model重置)
     - [qq邮箱关联outlook](#qq邮箱关联outlook)
     - [oracle](#oracle)
       - [sqlplus命令行操作](#sqlplus命令行操作)
@@ -128,15 +129,6 @@ set NODE_PATH=C:\Users\Administrator\AppData\Roaming\npm\node_modules
 
 ### IP查计算机名
 nbtstat -a 192.168.0.100
-
-### 谷歌插件位置(注意刷新)
-C:\Users\eshonulane\AppData\Local\Google\Chrome\User Data\Default\Extensions
-C:\Users\eshonulane\AppData\Local\Google\Chrome\User Data\Profile 1\Extensions
-
-### 谷歌接口调试model重置
-```
-moduleDiv = "<div class='panel panel-info no-radius b0 mt0 left-menu-border-top'>";	moduleDiv += "      <div class='panel-heading no-radius rel' data-parent='#modules'>";	moduleDiv += "          <div class='cursor collapsed' data-toggle='collapse' data-parent='#modules' href='#panel_ca_moduleId' crap-data='ca_moduleId' aria-expanded='false'>";	moduleDiv += "              <i class='iconfont module-title-ico f16'>&#xe624;</i>&nbsp;&nbsp;  ca_moduleName";	moduleDiv += "		        <span class='more'>";	moduleDiv += "			        <i class='iconfont fr h lh40'>&#xe75f;</i>";	moduleDiv += "			        <span class='t0 h'><i class='iconfont interface-menu rename-module mt0 lh40 fr'crap-data='ca_moduleId'>&#xe69e;</i></span>";	moduleDiv += "	                <span class='t0 h'><i class='iconfont interface-menu delete-module mt0 lh40 fr' crap-data='ca_moduleId'>&#xe69d;</i></span>";	moduleDiv += "			        <span class='t0 h'><i class='iconfont interface-menu down-module  mt0 lh40 fr' crap-data='ca_moduleId'>&#xe65e;</i></span>";	moduleDiv += "			        <span class='t0 h'><i class='iconfont interface-menu up-module  mt0 lh40 fr' crap-data='ca_moduleId'>&#xe8e9;</i></span>";	moduleDiv += "		        </span>";	moduleDiv += "          </div>";	moduleDiv += "      </div>";	moduleDiv += "      <div id='panel_ca_moduleId' class='panel-collapse BGEEE collapse' aria-expanded='false' style='height: 0px;'>";	moduleDiv += "          <div class='panel-body b0 p0'>";	moduleDiv += "              ca_interfaces";	moduleDiv += "           </div>";	moduleDiv += "       </div>";	moduleDiv += "   </div>";
-```
 
 ### ping各个网络
 for /L %i IN (192,1,254) DO ping -w 2 -n 1 192.168.0.%i<br/>
@@ -310,6 +302,12 @@ openark.exe
 3.DriverStore Explorer(效果不大)
 4.Windows Installer文件清理工具(效果不大)
 
+
+### 文件管理器ftp快捷连接
+```
+ftp://username:password@176.122.134.186/
+```
+
 ### google
 #### 谷歌禁止自动更新
 ```
@@ -323,6 +321,16 @@ http://www.google.com/dl/release2/chrome/ANgMaZuTFP5u7kDbYxrbLJ4_86.0.4240.183/8
     新建dword32bit UpdateDefault
       值 0 -->
 ```
+
+#### 谷歌插件位置(注意刷新)
+C:\Users\eshonulane\AppData\Local\Google\Chrome\User Data\Default\Extensions
+C:\Users\eshonulane\AppData\Local\Google\Chrome\User Data\Profile 1\Extensions
+
+#### 谷歌接口调试model重置
+```
+moduleDiv = "<div class='panel panel-info no-radius b0 mt0 left-menu-border-top'>";	moduleDiv += "      <div class='panel-heading no-radius rel' data-parent='#modules'>";	moduleDiv += "          <div class='cursor collapsed' data-toggle='collapse' data-parent='#modules' href='#panel_ca_moduleId' crap-data='ca_moduleId' aria-expanded='false'>";	moduleDiv += "              <i class='iconfont module-title-ico f16'>&#xe624;</i>&nbsp;&nbsp;  ca_moduleName";	moduleDiv += "		        <span class='more'>";	moduleDiv += "			        <i class='iconfont fr h lh40'>&#xe75f;</i>";	moduleDiv += "			        <span class='t0 h'><i class='iconfont interface-menu rename-module mt0 lh40 fr'crap-data='ca_moduleId'>&#xe69e;</i></span>";	moduleDiv += "	                <span class='t0 h'><i class='iconfont interface-menu delete-module mt0 lh40 fr' crap-data='ca_moduleId'>&#xe69d;</i></span>";	moduleDiv += "			        <span class='t0 h'><i class='iconfont interface-menu down-module  mt0 lh40 fr' crap-data='ca_moduleId'>&#xe65e;</i></span>";	moduleDiv += "			        <span class='t0 h'><i class='iconfont interface-menu up-module  mt0 lh40 fr' crap-data='ca_moduleId'>&#xe8e9;</i></span>";	moduleDiv += "		        </span>";	moduleDiv += "          </div>";	moduleDiv += "      </div>";	moduleDiv += "      <div id='panel_ca_moduleId' class='panel-collapse BGEEE collapse' aria-expanded='false' style='height: 0px;'>";	moduleDiv += "          <div class='panel-body b0 p0'>";	moduleDiv += "              ca_interfaces";	moduleDiv += "           </div>";	moduleDiv += "       </div>";	moduleDiv += "   </div>";
+```
+
 
 ### qq邮箱关联outlook
 ```
@@ -610,7 +618,7 @@ C:\Users\eshonulane\AppData\Roaming\DBeaverData\workspace6\General\.dbeaver\task
 正则替换
 (.*)\r\n
 {"type": "databaseTransferProducer","location": {"type": "query","project": "General","dataSource": "oracle_thin-17839c4fbf2-77da349831c948bf","query": "select * from $1 where req_id = 'ff808081750b3f1d01750b514e2a000c'"}},\r\n
-{"type": "streamTransferConsumer"},
+{"type": "streamTransferConsumer"},\r\n
 ```
 
 ### postman
