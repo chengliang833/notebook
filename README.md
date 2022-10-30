@@ -40,6 +40,9 @@
     - [bat添加到开始屏幕](#bat添加到开始屏幕)
     - [热键占用排查](#热键占用排查)
     - [清理垃圾步骤](#清理垃圾步骤)
+    - [安全](#安全)
+      - [windows defender关闭自动删除高威胁文件](#windows-defender关闭自动删除高威胁文件)
+      - [不检查指定文件或文件夹](#不检查指定文件或文件夹)
     - [google](#google)
       - [谷歌禁止自动更新](#谷歌禁止自动更新)
     - [qq邮箱关联outlook](#qq邮箱关联outlook)
@@ -309,6 +312,19 @@ openark.exe
 2.windows磁盘清理
 3.DriverStore Explorer(效果不大)
 4.Windows Installer文件清理工具(效果不大)
+
+### 安全
+#### windows defender关闭自动删除高威胁文件
+```
+//powershell管理员执行
+//要执行对应高威胁文件时，需要主动右键使用windows defender扫描，并对其执行"允许在设备上"操作
+Remove-MpPreference -HighThreatDefaultAction
+```
+
+#### 不检查指定文件或文件夹
+```
+Remove-MpPreference -AttackSurfaceReductionOnlyExclusions "C:\Windows\"
+```
 
 ### google
 #### 谷歌禁止自动更新
