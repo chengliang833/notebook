@@ -38,10 +38,10 @@
     - [bat添加到开始屏幕](#bat添加到开始屏幕)
     - [热键占用排查](#热键占用排查)
     - [清理垃圾步骤](#清理垃圾步骤)
-    - [文件管理器ftp快捷连接](#文件管理器ftp快捷连接)
     - [安全](#安全)
       - [windows defender关闭自动删除高威胁文件](#windows-defender关闭自动删除高威胁文件)
       - [不检查指定文件或文件夹](#不检查指定文件或文件夹)
+    - [文件管理器ftp快捷连接](#文件管理器ftp快捷连接)
     - [google](#google)
       - [谷歌禁止自动更新](#谷歌禁止自动更新)
       - [谷歌插件位置(注意刷新)](#谷歌插件位置注意刷新)
@@ -80,6 +80,7 @@
     - [svn](#svn)
       - [SVN账号密码修改地址](#svn账号密码修改地址)
       - [svn忽略文件](#svn忽略文件)
+      - [tortoiseSVN git设置只扫描某个目录](#tortoisesvn-git设置只扫描某个目录)
     - [tomcat](#tomcat)
       - [tomcat启动](#tomcat启动)
     - [office](#office)
@@ -551,6 +552,16 @@ test-classes
 *.json.gz
 //单独配置，如target已提交空目录，目录下新增文件时，会显示
 ```
+
+#### tortoiseSVN git设置只扫描某个目录
+```
+settings
+IconOverlays
+取消所有Drive Types
+取消Shwo excluded folders as normal
+增加Include path(一行一个指定目录，如D:\)
+```
+
 ### tomcat
 #### tomcat启动
 ```
