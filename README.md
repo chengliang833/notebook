@@ -38,6 +38,8 @@
     - [bat添加到开始屏幕](#bat添加到开始屏幕)
     - [热键占用排查](#热键占用排查)
     - [清理垃圾步骤](#清理垃圾步骤)
+    - [注册表 regedit](#注册表-regedit)
+      - [查看历史运行缓存](#查看历史运行缓存)
     - [安全](#安全)
       - [windows defender关闭自动删除高威胁文件](#windows-defender关闭自动删除高威胁文件)
       - [不检查指定文件或文件夹](#不检查指定文件或文件夹)
@@ -305,6 +307,13 @@ openark.exe
 2.windows磁盘清理
 3.DriverStore Explorer(效果不大)
 4.Windows Installer文件清理工具(效果不大)
+
+
+### 注册表 regedit
+#### 查看历史运行缓存
+```
+计算机\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Compatibility Assistant\Store
+```
 
 ### 安全
 #### windows defender关闭自动删除高威胁文件
