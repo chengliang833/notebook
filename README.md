@@ -321,6 +321,7 @@ openark.exe
 //powershell管理员执行
 //要执行对应高威胁文件时，需要主动右键使用windows defender扫描，并对其执行"允许在设备上"操作
 Remove-MpPreference -HighThreatDefaultAction
+Get-MpPreference | findstr HighThreatDefaultAction
 ```
 
 #### 不检查指定文件或文件夹
